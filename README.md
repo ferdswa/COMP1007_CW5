@@ -1,0 +1,3 @@
+# 2022-COMP1007-LargeCoursework01
+
+Please see the description for this *assessed* coursework in the PDF on Moodle...

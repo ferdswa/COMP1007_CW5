@@ -1,0 +1,9 @@
+CHIP ALUDataPath
+{
+    IN dataIn[8], carryIn, sums, ands, xors, ors, op1Load, op2Load, hiLo, notOp2, resLoad;
+    OUT dataOut[8], carryOut;
+
+
+PARTS:
+	
+}

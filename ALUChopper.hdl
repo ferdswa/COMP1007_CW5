@@ -1,0 +1,14 @@
+CHIP ALUChopper
+{
+    IN in[8], aLoad, bLoad, hiLo;
+    OUT aHiLo[4], bHiLo[4];
+
+
+PARTS:
+    Register4(in=in[0..3],out=alo,load=aLoad);
+    Register4(in=in[4..7],out=ahi,load=aLoad);
+    Register4(in=in[0..3],out=blo,load=bLoad);
+    Register4(in=in[4..7],out=bhi,load=bLoad);
+    Mux4(a=alo,b=ahi,sel=hiLo,out=aHiLo);
+    Mux4(a=blo,b=bhi,sel=hiLo,out=bHiLo);
+}

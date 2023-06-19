@@ -1,0 +1,9 @@
+CHIP ALUProcess
+{
+    IN a[4], b[4], sums, ands, xors, ors, hiLo, resLoad, carryIn;
+    OUT out[8], carryOut;
+
+
+PARTS:
+
+}

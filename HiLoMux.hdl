@@ -1,0 +1,8 @@
+CHIP HiLoMux
+{
+	IN in[8], sel;
+	OUT out[4];
+
+PARTS:	
+	Mux4(a=in[0..3],b=in[4..7],sel=sel,out=out);
+}

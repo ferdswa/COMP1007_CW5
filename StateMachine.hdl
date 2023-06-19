@@ -1,0 +1,20 @@
+CHIP StateMachine
+{
+    IN reset;
+    OUT state[2];
+
+PARTS:
+    Not(in=reset, out=nReset);
+
+    And(a=ns0,b=nReset,out=ns0r);
+    And(a=ns1,b=nReset,out=ns1r);
+
+    DFF(in=ns0r, out=s0);
+    DFF(in=ns1r, out=s1);
+
+    And(a=s0,b=nReset,out=state[0]);
+    And(a=s1,b=nReset,out=state[1]);
+
+    HalfAdder(a=true,b=s0, sum=ns0, carry=c);
+    HalfAdder(a=c,b=s1,sum=ns1);
+}

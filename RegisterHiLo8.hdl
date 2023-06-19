@@ -1,0 +1,9 @@
+CHIP RegisterHiLo8
+{
+    IN in[4], loadLo, loadHi;
+    OUT out[8];
+
+PARTS:
+    Register4(in=in,out=out[0..3],load=loadLo);
+    Register4(in=in,out=out[4..7],load=loadHi);
+}
